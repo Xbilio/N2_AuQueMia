@@ -1,0 +1,54 @@
+﻿CREATE TABLE [dbo].[Caixa](
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Empresa] [varchar](max) NULL,
+[Mes] [int] NULL,
+[Ano] [int] NULL,
+CONSTRAINT [PK_Caixa] PRIMARY KEY CLUSTERED
+(
+[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON
+[PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object: Table [dbo].[CaixaDetalhe] Script Date: 17/10/2017 22:29:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[CaixaDetalhe](
+[id] [int] IDENTITY(1,1) NOT NULL,
+[CaixaId] [int] NOT NULL,
+[Data] [datetime] NOT NULL,
+[Evento] [varchar](50) NOT NULL,
+[Entrada] [money] NOT NULL,
+[Saida] [money] NOT NULL,
+CONSTRAINT [PK_CaixaDetalhe] PRIMARY KEY CLUSTERED
+(
+[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON
+[PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+ALTER TABLE [dbo].[CaixaDetalhe] WITH CHECK ADD CONSTRAINT [FK_CaixaDetalhe_Caixa] FOREIGN KEY([CaixaId])
+REFERENCES [dbo].[Caixa] ([Id])
+GO
+ALTER TABLE [dbo].[CaixaDetalhe] CHECK CONSTRAINT [FK_CaixaDetalhe_Caixa]
+GO
+
+
+
+
+insert into empresas values (1, 'VW do Brasil');
+insert into empresas values (2, 'Fiat');
+insert into empresas values (3, 'GM');
+insert into empresas values (4, 'Ford');
+insert into empresas values (5, 'Cofap');
+insert into empresas values (6, 'Nakata');
+insert into empresas values (7, 'Makita');
+insert into empresas values (8, 'Carrefour');

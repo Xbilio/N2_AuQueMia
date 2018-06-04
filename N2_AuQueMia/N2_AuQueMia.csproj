@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78600914-F190-4D15-83F8-9B294A751DDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>N2_AuQueMia</RootNamespace>
+    <AssemblyName>N2_AuQueMia</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassesDAO\AnimalBanhoDAO.cs" />
+    <Compile Include="ClassesDAO\AnimalDAO.cs" />
+    <Compile Include="ClassesDAO\BanhoDAO.cs" />
+    <Compile Include="ClassesDAO\CargoDAO.cs" />
+    <Compile Include="ClassesDAO\ConsulMedicaDAO.cs" />
+    <Compile Include="ClassesDAO\EspecieDAO.cs" />
+    <Compile Include="ClassesDAO\FuncionarioDAO.cs" />
+    <Compile Include="ClassesDAO\PorteDAO.cs" />
+    <Compile Include="ClassesDAO\RacaDAO.cs" />
+    <Compile Include="ClassesDAO\ResponsavelDAO.cs" />
+    <Compile Include="ClassesDAO\VeterinarioDAO.cs" />
+    <Compile Include="ClassesDAO\VetPorEspecieDAO.cs" />
+    <Compile Include="ClassesVO\AnimalBanhoVO.cs" />
+    <Compile Include="ClassesVO\AnimalVO.cs" />
+    <Compile Include="ClassesVO\BanhoVO.cs" />
+    <Compile Include="ClassesVO\CargoVO.cs" />
+    <Compile Include="ClassesVO\ConsulMedicaVO.cs" />
+    <Compile Include="ClassesVO\EspecieVO.cs" />
+    <Compile Include="ClassesVO\FuncionarioVO.cs" />
+    <Compile Include="ClassesVO\PorteVO.cs" />
+    <Compile Include="ClassesVO\RacaVO.cs" />
+    <Compile Include="ClassesVO\ResponsavelVO.cs" />
+    <Compile Include="ClassesVO\VeterinarioVO.cs" />
+    <Compile Include="ClassesVO\VetPorEspecieVO.cs" />
+    <Compile Include="Forms\FormCadAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCadAnimal.Designer.cs">
+      <DependentUpon>FormCadAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCadResp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCadResp.Designer.cs">
+      <DependentUpon>FormCadResp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormControleAnimais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormControleAnimais.Designer.cs">
+      <DependentUpon>FormControleAnimais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormIndex.Designer.cs">
+      <DependentUpon>FormIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormCadAnimal.resx">
+      <DependentUpon>FormCadAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCadResp.resx">
+      <DependentUpon>FormCadResp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormControleAnimais.resx">
+      <DependentUpon>FormControleAnimais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormIndex.resx">
+      <DependentUpon>FormIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaN2\BibliotecaN2.csproj">
+      <Project>{003436e6-4521-4855-8a29-9a3f56d6f469}</Project>
+      <Name>BibliotecaN2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1new %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5cancel %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nav_First.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nav_Last.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nav_Next.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nav_Previous.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
